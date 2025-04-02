@@ -18,7 +18,7 @@ export default function Home() {
           {/* Center Profile */}
           <ProfileCenter />
 
-          {/* AI & Professional Planet (Top Left) */}
+          {/* AI Work Planet (Top Left) */}
           <Planet
             title="AI Work"
             description="My professional work in AI safety and governance"
@@ -34,13 +34,19 @@ export default function Home() {
                   "https://www.google.com/s2/favicons?domain=linkedin.com&sz=64",
               },
               {
-                label: "CV/Resume",
+                label: "Resume",
                 url: "https://drive.google.com/file/d/1JELje2IDSLOsMUR-HbVFXr7OwSOkaTtL/view?usp=sharing",
                 iconUrl:
-                  "https://www.google.com/s2/favicons?domain=docs.google.com&sz=64",
+                  "https://www.google.com/s2/favicons?domain=pdf.com&sz=64",
               },
               {
-                label: "Latest Projects",
+                label: "GitHub",
+                url: "https://github.com/Aelerinya",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=github.com&sz=64",
+              },
+              {
+                label: "Latest projets",
                 url: "#",
                 isSectionHeader: true,
               },
@@ -53,7 +59,7 @@ export default function Home() {
                 url: "https://www.aisafetyconnect.com/",
               },
               {
-                label: "MATS Research",
+                label: "MATS",
                 url: "https://www.matsprogram.org/alumni",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=matsprogram.org&sz=64",
@@ -61,31 +67,38 @@ export default function Home() {
             ]}
           />
 
-          {/* Community Building Planet (Top Right) */}
+          {/* Contact Info Planet (Top Right) */}
           <Planet
-            title="Community"
-            description="Building connections and communities"
+            title="Contact Info"
+            description="Get in touch with me"
             position="top-right"
             baseColor="warm-sun"
             darkColor="sunset-orange"
             size="large"
             links={[
               {
-                label: "Flatshare Info",
-                url: "#",
+                label: "Email",
+                url: "mailto:lucie.philippon@proton.me",
                 iconUrl:
-                  "https://www.google.com/s2/favicons?domain=flatshare.com&sz=64",
+                  "https://www.google.com/s2/favicons?domain=proton.me&sz=64",
               },
               {
-                label: "Community Initiatives",
-                url: "#",
+                label: "Phone",
+                url: "tel:+33782840880",
                 iconUrl:
-                  "https://www.google.com/s2/favicons?domain=community.org&sz=64",
+                  "https://www.google.com/s2/favicons?domain=phone.com&sz=64",
+              },
+              {
+                label: "@aelerinya",
+                url: "#",
+                action: "copy to clipboard",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=discord.com&sz=64",
               },
             ]}
           />
 
-          {/* Friendship & Dating Planet (Bottom Right) */}
+          {/* Friendship Planet (Bottom Right) */}
           <Planet
             title="Friendship"
             description="Get to know me better"
@@ -95,21 +108,25 @@ export default function Home() {
             size="large"
             links={[
               {
-                label: "Date me",
-                url: "#",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=date.me&sz=64",
-              },
-              {
                 label: "Manifold.love",
-                url: "#",
+                url: "https://www.manifold.love/Aelerinya",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=manifold.love&sz=64",
+              },
+              {
+                label: "Conversation menu",
+                url: "https://lucieworkinghard.notion.site/Lucie-s-conversation-menu-263f3b13347e49b8a2d09ddcd112f75a",
+                iconUrl: "💬",
+              },
+              {
+                label: "Activities menu",
+                url: "https://lucieworkinghard.notion.site/Activities-menu-1a7baaa52195808588eec4545964dfcb?pvs=25",
+                iconUrl: "🧗",
               },
             ]}
           />
 
-          {/* Writing & Thoughts Planet (Bottom Left) */}
+          {/* Writing Planet (Bottom Left) */}
           <Planet
             title="Writing"
             description="My thoughts and writing"
@@ -120,21 +137,19 @@ export default function Home() {
             links={[
               {
                 label: "LessWrong",
-                url: "#",
+                url: "https://www.lesswrong.com/users/lucie-philippon",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=lesswrong.com&sz=64",
               },
               {
                 label: "Twitter/X",
-                url: "#",
+                url: "https://x.com/Aelerinya",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=twitter.com&sz=64",
               },
               {
-                label: "Blog",
-                url: "#",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=blog.com&sz=64",
+                label: "My old website with old texts",
+                url: "https://lucieworkinghard.notion.site/Lucie-s-homepage-c1deefa7fbc64ed5b3bb7dd98b963f8d",
               },
             ]}
           />

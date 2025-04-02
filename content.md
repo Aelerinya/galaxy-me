@@ -51,12 +51,14 @@
 - **Description**: Get to know me better
 - **Links**:
   - Manifold.love
-    - URL: #
+    - URL: https://www.manifold.love/Aelerinya
     - Icon: https://www.google.com/s2/favicons?domain=manifold.love&sz=64
   - Conversation menu
     - URL: https://lucieworkinghard.notion.site/Lucie-s-conversation-menu-263f3b13347e49b8a2d09ddcd112f75a
+    - Icon: 💬
   - Activities menu
     - URL: https://lucieworkinghard.notion.site/Activities-menu-1a7baaa52195808588eec4545964dfcb?pvs=25
+    - Icon: 🧗
 
 ## Writing Planet (Bottom Left)
 
@@ -64,14 +66,13 @@
 - **Description**: My thoughts and writing
 - **Links**:
   - LessWrong
-    - URL: #
+    - URL: https://www.lesswrong.com/users/lucie-philippon
     - Icon: https://www.google.com/s2/favicons?domain=lesswrong.com&sz=64
   - Twitter/X
     - URL: https://x.com/Aelerinya
     - Icon: https://www.google.com/s2/favicons?domain=twitter.com&sz=64
-  - Blog
-    - URL: #
-    - Icon: https://www.google.com/s2/favicons?domain=blog.com&sz=64
+  - My old website with old texts
+    - URL: https://lucieworkinghard.notion.site/Lucie-s-homepage-c1deefa7fbc64ed5b3bb7dd98b963f8d
 
 ## Available Colors
 

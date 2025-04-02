@@ -1,3 +1,7 @@
+"use client";
+
+import PlanetLink from "./planet-link";
+
 type PlanetPosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";
 type PlanetColors =
   | "tech-blue"
@@ -12,9 +16,10 @@ type PlanetDarkColors =
 
 interface PlanetLink {
   label: string;
-  url: string;
+  url?: string;
   iconUrl?: string;
   isSectionHeader?: boolean;
+  action?: string;
 }
 
 interface PlanetProps {
@@ -86,33 +91,18 @@ export default function Planet({
 
           <div className="flex flex-col gap-1.5 w-full">
             <div className="flex flex-wrap justify-center gap-2 w-full">
-              {links.map((link, index) =>
-                link.isSectionHeader ? (
-                  <div key={index} className="w-full">
-                    <div className="text-sm font-semibold text-starlight-white/90 mt-4 mb-2 w-full text-center">
-                      {link.label}
-                    </div>
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-starlight-white/20 to-transparent mb-2" />
-                  </div>
-                ) : (
-                  <a
-                    key={index}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-sm px-3 py-1 rounded-full bg-gradient-to-r ${baseColorClasses[baseColor]} ${darkColorClasses[darkColor]} hover:opacity-90 transition-opacity flex items-center gap-2 justify-center`}
-                  >
-                    {link.iconUrl && (
-                      <img
-                        src={link.iconUrl}
-                        alt={`${link.label} icon`}
-                        className="w-4 h-4"
-                      />
-                    )}
-                    {link.label}
-                  </a>
-                )
-              )}
+              {links.map((link, index) => (
+                <PlanetLink
+                  key={index}
+                  label={link.label}
+                  url={link.url}
+                  iconUrl={link.iconUrl}
+                  isSectionHeader={link.isSectionHeader}
+                  action={link.action}
+                  baseColor={baseColorClasses[baseColor]}
+                  darkColor={darkColorClasses[darkColor]}
+                />
+              ))}
             </div>
           </div>
         </div>
