@@ -1,26 +1,103 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 export default function ConnectingLines() {
+  const svgRef = useRef<SVGSVGElement>(null);
+
+  useEffect(() => {
+    const updateLines = () => {
+      if (!svgRef.current) return;
+
+      const center = document.querySelector('[data-center="true"]');
+      const planets = document.querySelectorAll('[data-planet="true"]');
+
+      if (!center || planets.length === 0) return;
+
+      const centerRect = center.getBoundingClientRect();
+      const centerX = centerRect.left + centerRect.width / 2;
+      const centerY = centerRect.top + centerRect.height / 2;
+
+      // Clear existing lines
+      const defs = svgRef.current.querySelector("defs");
+      if (defs) defs.innerHTML = "";
+
+      // Create gradient definitions for each planet
+      planets.forEach((planet, index) => {
+        const planetRect = planet.getBoundingClientRect();
+        const planetX = planetRect.left + planetRect.width / 2;
+        const planetY = planetRect.top + planetRect.height / 2;
+
+        // Create gradient
+        const gradientId = `gradient-${index}`;
+        const gradient = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "linearGradient"
+        );
+        gradient.setAttribute("id", gradientId);
+        gradient.setAttribute("gradientUnits", "userSpaceOnUse");
+        gradient.setAttribute("x1", centerX.toString());
+        gradient.setAttribute("y1", centerY.toString());
+        gradient.setAttribute("x2", planetX.toString());
+        gradient.setAttribute("y2", planetY.toString());
+
+        const stop1 = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "stop"
+        );
+        stop1.setAttribute("offset", "0%");
+        stop1.setAttribute("stop-color", "rgba(130, 101, 167, 0.3)");
+
+        const stop2 = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "stop"
+        );
+        stop2.setAttribute("offset", "100%");
+        stop2.setAttribute("stop-color", "rgba(130, 101, 167, 0)");
+
+        gradient.appendChild(stop1);
+        gradient.appendChild(stop2);
+        defs?.appendChild(gradient);
+
+        // Create line
+        const line = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "line"
+        );
+        line.setAttribute("x1", centerX.toString());
+        line.setAttribute("y1", centerY.toString());
+        line.setAttribute("x2", planetX.toString());
+        line.setAttribute("y2", planetY.toString());
+        line.setAttribute("stroke", `url(#${gradientId})`);
+        line.setAttribute("stroke-width", "4");
+        line.setAttribute("filter", "blur(4px)");
+
+        if (svgRef.current) {
+          svgRef.current.appendChild(line);
+        }
+      });
+    };
+
+    // Initial update
+    updateLines();
+
+    // Update on resize and scroll
+    window.addEventListener("resize", updateLines);
+    window.addEventListener("scroll", updateLines);
+
+    return () => {
+      window.removeEventListener("resize", updateLines);
+      window.removeEventListener("scroll", updateLines);
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
-      {/* Line to top-left (larger planet) */}
-      <div className="absolute top-0 left-0 w-1/2 h-1/2">
-        <div className="absolute top-[9.5rem] left-[9.5rem] w-[calc(50vw-9.5rem)] h-[calc(50vh-9.5rem)] border-t border-l border-cosmic-purple/30 rounded-tl-full" />
-      </div>
-
-      {/* Line to top-right */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2">
-        <div className="absolute top-32 right-32 w-[calc(50vw-8rem)] h-[calc(50vh-8rem)] border-t border-r border-cosmic-purple/30 rounded-tr-full" />
-      </div>
-
-      {/* Line to bottom-left (larger planet) */}
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2">
-        <div className="absolute bottom-[9.5rem] left-[9.5rem] w-[calc(50vw-9.5rem)] h-[calc(50vh-9.5rem)] border-b border-l border-cosmic-purple/30 rounded-bl-full" />
-      </div>
-
-      {/* Line to bottom-right */}
-      <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
-        <div className="absolute bottom-32 right-32 w-[calc(50vw-8rem)] h-[calc(50vh-8rem)] border-b border-r border-cosmic-purple/30 rounded-br-full" />
-      </div>
-    </div>
-  )
+    <svg
+      ref={svgRef}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      style={{ filter: "blur(4px)" }}
+    >
+      <defs />
+    </svg>
+  );
 }
-

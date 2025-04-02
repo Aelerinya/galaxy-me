@@ -69,7 +69,10 @@ export default function Planet({
   };
 
   return (
-    <div className={`absolute ${positionClasses[position]} z-10`}>
+    <div
+      className={`absolute ${positionClasses[position]} z-10`}
+      data-planet="true"
+    >
       <div
         className={`${sizeClasses[size]} rounded-full bg-gradient-to-br ${baseColorClasses[baseColor]} ${darkColorClasses[darkColor]} p-1`}
       >
