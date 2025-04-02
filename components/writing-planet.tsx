@@ -1,7 +1,7 @@
 import PlanetWrapper from "./planet-wrapper";
 import PlanetLink from "./planet-link";
 
-interface ContactPlanetProps {
+interface WritingPlanetProps {
   title: string;
   description: string;
   position: "top-left" | "top-right" | "bottom-left" | "bottom-right";
@@ -16,7 +16,7 @@ interface ContactPlanetProps {
   size?: "medium" | "large";
 }
 
-export default function ContactPlanet({
+export default function WritingPlanet({
   title,
   description,
   position,
@@ -24,7 +24,7 @@ export default function ContactPlanet({
   darkColor,
   links,
   size = "large",
-}: ContactPlanetProps) {
+}: WritingPlanetProps) {
   return (
     <PlanetWrapper
       position={position}

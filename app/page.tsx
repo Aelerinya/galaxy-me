@@ -3,6 +3,8 @@ import Planet from "@/components/planet";
 import ProfileCenter from "@/components/profile-center";
 import ConnectingLines from "@/components/connecting-lines";
 import ContactPlanet from "@/components/contact-planet";
+import FriendshipPlanet from "@/components/friendship-planet";
+import WritingPlanet from "@/components/writing-planet";
 
 export default function Home() {
   return (
@@ -100,7 +102,7 @@ export default function Home() {
           />
 
           {/* Friendship Planet (Bottom Right) */}
-          <Planet
+          <FriendshipPlanet
             title="Friendship"
             description="Get to know me better"
             position="bottom-right"
@@ -128,7 +130,7 @@ export default function Home() {
           />
 
           {/* Writing Planet (Bottom Left) */}
-          <Planet
+          <WritingPlanet
             title="Writing"
             description="My thoughts and writing"
             position="bottom-left"
