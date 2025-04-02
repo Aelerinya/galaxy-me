@@ -1,20 +1,28 @@
-type PlanetPosition = "top-left" | "top-right" | "bottom-left" | "bottom-right"
-type PlanetColors = "tech-blue" | "warm-sun" | "relationship-purple" | "idea-green"
-type PlanetDarkColors = "deep-blue" | "sunset-orange" | "deep-purple" | "forest-green"
+type PlanetPosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";
+type PlanetColors =
+  | "tech-blue"
+  | "warm-sun"
+  | "relationship-purple"
+  | "idea-green";
+type PlanetDarkColors =
+  | "deep-blue"
+  | "sunset-orange"
+  | "deep-purple"
+  | "forest-green";
 
 interface PlanetLink {
-  label: string
-  url: string
+  label: string;
+  url: string;
 }
 
 interface PlanetProps {
-  title: string
-  description: string
-  position: PlanetPosition
-  baseColor: PlanetColors
-  darkColor: PlanetDarkColors
-  links: PlanetLink[]
-  size?: "medium" | "large"
+  title: string;
+  description: string;
+  position: PlanetPosition;
+  baseColor: PlanetColors;
+  darkColor: PlanetDarkColors;
+  links: PlanetLink[];
+  size?: "medium" | "large";
 }
 
 export default function Planet({
@@ -32,7 +40,7 @@ export default function Planet({
     "top-right": "top-8 right-8",
     "bottom-left": "bottom-8 left-8",
     "bottom-right": "bottom-8 right-8",
-  }
+  };
 
   // Color classes
   const baseColorClasses = {
@@ -40,25 +48,25 @@ export default function Planet({
     "warm-sun": "from-[#F9A826]",
     "relationship-purple": "from-[#9656A1]",
     "idea-green": "from-[#06D6A0]",
-  }
+  };
 
   const darkColorClasses = {
     "deep-blue": "to-[#01487E]",
     "sunset-orange": "to-[#F46036]",
     "deep-purple": "to-[#4B2E83]",
     "forest-green": "to-[#099873]",
-  }
+  };
 
   // Size classes
   const sizeClasses = {
-    medium: "w-48 h-48",
-    large: "w-56 h-56",
-  }
+    medium: "w-64 h-64",
+    large: "w-80 h-80",
+  };
 
   const titleSizeClasses = {
-    medium: "text-lg",
-    large: "text-xl",
-  }
+    medium: "text-xl",
+    large: "text-2xl",
+  };
 
   return (
     <div className={`absolute ${positionClasses[position]} z-10`}>
@@ -66,8 +74,10 @@ export default function Planet({
         className={`${sizeClasses[size]} rounded-full bg-gradient-to-br ${baseColorClasses[baseColor]} ${darkColorClasses[darkColor]} p-1`}
       >
         <div className="w-full h-full rounded-full bg-space-blue/80 flex flex-col items-center justify-center p-4 text-center">
-          <h3 className={`${titleSizeClasses[size]} font-bold mb-1`}>{title}</h3>
-          <p className="text-xs mb-3 text-starlight-white/90">{description}</p>
+          <h3 className={`${titleSizeClasses[size]} font-bold mb-1`}>
+            {title}
+          </h3>
+          <p className="text-sm mb-3 text-starlight-white/90">{description}</p>
 
           <div className="flex flex-col gap-1.5">
             {links.map((link, index) => (
@@ -76,7 +86,7 @@ export default function Planet({
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-xs px-3 py-1 rounded-full bg-gradient-to-r ${baseColorClasses[baseColor]} ${darkColorClasses[darkColor]} hover:opacity-90 transition-opacity`}
+                className={`text-sm px-3 py-1 rounded-full bg-gradient-to-r ${baseColorClasses[baseColor]} ${darkColorClasses[darkColor]} hover:opacity-90 transition-opacity`}
               >
                 {link.label}
               </a>
@@ -85,6 +95,5 @@ export default function Planet({
         </div>
       </div>
     </div>
-  )
+  );
 }
-
