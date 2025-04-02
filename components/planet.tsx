@@ -13,6 +13,8 @@ type PlanetDarkColors =
 interface PlanetLink {
   label: string;
   url: string;
+  iconUrl?: string;
+  isSectionHeader?: boolean;
 }
 
 interface PlanetProps {
@@ -59,13 +61,13 @@ export default function Planet({
 
   // Size classes
   const sizeClasses = {
-    medium: "w-64 h-64",
-    large: "w-80 h-80",
+    medium: "w-80 h-80",
+    large: "w-96 h-96",
   };
 
   const titleSizeClasses = {
-    medium: "text-xl",
-    large: "text-2xl",
+    medium: "text-2xl",
+    large: "text-3xl",
   };
 
   return (
@@ -82,18 +84,36 @@ export default function Planet({
           </h3>
           <p className="text-sm mb-3 text-starlight-white/90">{description}</p>
 
-          <div className="flex flex-col gap-1.5">
-            {links.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-sm px-3 py-1 rounded-full bg-gradient-to-r ${baseColorClasses[baseColor]} ${darkColorClasses[darkColor]} hover:opacity-90 transition-opacity`}
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="flex flex-col gap-1.5 w-full">
+            <div className="flex flex-wrap justify-center gap-2 w-full">
+              {links.map((link, index) =>
+                link.isSectionHeader ? (
+                  <div key={index} className="w-full">
+                    <div className="text-sm font-semibold text-starlight-white/90 mt-4 mb-2 w-full text-center">
+                      {link.label}
+                    </div>
+                    <div className="w-full h-px bg-gradient-to-r from-transparent via-starlight-white/20 to-transparent mb-2" />
+                  </div>
+                ) : (
+                  <a
+                    key={index}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm px-3 py-1 rounded-full bg-gradient-to-r ${baseColorClasses[baseColor]} ${darkColorClasses[darkColor]} hover:opacity-90 transition-opacity flex items-center gap-2 justify-center`}
+                  >
+                    {link.iconUrl && (
+                      <img
+                        src={link.iconUrl}
+                        alt={`${link.label} icon`}
+                        className="w-4 h-4"
+                      />
+                    )}
+                    {link.label}
+                  </a>
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>
