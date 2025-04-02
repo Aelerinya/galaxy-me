@@ -2,6 +2,7 @@ import Starfield from "@/components/starfield";
 import Planet from "@/components/planet";
 import ProfileCenter from "@/components/profile-center";
 import ConnectingLines from "@/components/connecting-lines";
+import ContactPlanet from "@/components/contact-planet";
 
 export default function Home() {
   return (
@@ -68,7 +69,7 @@ export default function Home() {
           />
 
           {/* Contact Info Planet (Top Right) */}
-          <Planet
+          <ContactPlanet
             title="Contact Info"
             description="Get in touch with me"
             position="top-right"
