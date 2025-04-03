@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface PlanetLinkProps {
   label: string;
@@ -58,7 +59,13 @@ export default function PlanetLink({
           (isEmoji ? (
             <span className="text-base">{iconUrl}</span>
           ) : (
-            <img src={iconUrl} alt={`${label} icon`} className="w-4 h-4" />
+            <Image
+              src={iconUrl}
+              alt={`${label} icon`}
+              width={16}
+              height={16}
+              className="w-4 h-4"
+            />
           ))}
         {label}
       </a>

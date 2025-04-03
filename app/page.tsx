@@ -2,7 +2,6 @@ import Starfield from "@/components/starfield";
 import Planet from "@/components/planet";
 import ProfileCenter from "@/components/profile-center";
 import ProfileText from "@/components/profile-text";
-import ConnectingLines from "@/components/connecting-lines";
 import ContactPlanet from "@/components/contact-planet";
 import FriendshipPlanet from "@/components/friendship-planet";
 import WritingPlanet from "@/components/writing-planet";
@@ -11,7 +10,6 @@ export default function Home() {
   return (
     <main className="relative min-h-screen w-full overflow-hidden bg-space-blue text-starlight-white">
       <Starfield />
-      {/* <ConnectingLines /> */}
 
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-center text-4xl font-bold mb-12 mt-4">
