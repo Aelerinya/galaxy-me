@@ -3,8 +3,17 @@
 ## Profile Center
 
 - **Name**: Lucie
-- **Description**: Hi, I'm Lucie! A French gal interested in AI notkilleveryoneism.
 - **Profile Image**: `/images/lucie-profile.jpg`
+
+## Presentation
+
+```md
+Hi there! I'm Lucie Philippon, a French rationalist interested in AI safety, personal development, and community building.
+
+## What I'm Up To
+
+Currently, I'm on a break and visiting the Bay Area, exploring what my next steps might be. I'm working through some big questions like where to live, which relationships to build, and whether to continue policy work or return to software development. If you're curious about my thought process, check out my [career reflections](https://docs.google.com/document/d/1383rUz4ca5htvQ_bjJ2VE0Rx23JuBmavNdgSWQJPmNo/edit?tab=t.0#heading=h.kyfsm5olvsip).
+```
 
 ## AI Work Planet (Top Left)
 

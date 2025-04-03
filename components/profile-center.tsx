@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ProfileCenter() {
   return (
     <div
-      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+      className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
       data-center="true"
     >
       <div className="w-64 h-64 rounded-full bg-gradient-to-br from-cosmic-purple to-nebula-pink p-1">
@@ -18,13 +18,6 @@ export default function ProfileCenter() {
             />
           </div>
         </div>
-      </div>
-
-      <div className="text-center mt-6 max-w-xs mx-auto">
-        <h2 className="text-2xl font-bold mb-2">Lucie</h2>
-        <p className="text-starlight-white/90">
-          Hi, I'm Lucie! A French gal interested in AI notkilleveryoneism.
-        </p>
       </div>
     </div>
   );
