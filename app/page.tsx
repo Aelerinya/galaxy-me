@@ -1,5 +1,5 @@
 import Starfield from "@/components/starfield";
-import Planet from "@/components/planet";
+import AIWorkPlanet from "@/components/ai-work-planet";
 import ProfileCenter from "@/components/profile-center";
 import ProfileText from "@/components/profile-text";
 import ContactPlanet from "@/components/contact-planet";
@@ -26,7 +26,7 @@ export default function Home() {
           </div>
 
           {/* AI Work Planet (Top Left) */}
-          <Planet
+          <AIWorkPlanet
             title="AI Work"
             description="My professional work in AI safety and governance"
             position="top-left"
