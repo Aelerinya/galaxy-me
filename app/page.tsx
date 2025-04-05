@@ -12,10 +12,13 @@ export default function Home() {
       <Starfield />
 
       <div className="container mx-auto px-4 py-8 z-10">
-        {/* TODO: Figure out why the title is hidden by the Starfield */}
-
         <div className="relative xl:h-[calc(90vh)] flex flex-col items-center justify-center gap-8">
-          <h1 className="text-center text-4xl font-bold mb-8 mt-4 xl:absolute xl:top-4">
+          <h1 className="text-center text-4xl font-bold mb-8 mt-4 xl:absolute xl:top-4 flex items-center justify-center gap-2">
+            <img
+              src="/images/lp-cosmic-favicon.svg"
+              alt="LP Logo"
+              className="w-24 h-24"
+            />
             Lucie&apos;s Universe
           </h1>
 
