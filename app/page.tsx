@@ -5,6 +5,7 @@ import ProfileText from "@/components/profile-text";
 import ContactPlanet from "@/components/contact-planet";
 import FriendshipPlanet from "@/components/friendship-planet";
 import WritingPlanet from "@/components/writing-planet";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,10 +15,11 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 z-10">
         <div className="relative xl:h-[calc(90vh)] flex flex-col items-center justify-center gap-8">
           <h1 className="text-center text-4xl font-bold mb-8 mt-4 xl:absolute xl:top-4 flex items-center justify-center gap-2">
-            <img
+            <Image
               src="/images/lp-cosmic-favicon.svg"
               alt="LP Logo"
-              className="w-24 h-24"
+              width={96}
+              height={96}
             />
             Lucie&apos;s Universe
           </h1>
