@@ -11,17 +11,19 @@ export default function Home() {
     <main className="relative min-h-screen w-full overflow-hidden bg-space-blue text-starlight-white">
       <Starfield />
 
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-center text-4xl font-bold mb-12 mt-4">
-          Lucie&apos;s Universe
-        </h1>
+      <div className="container mx-auto px-4 py-8 z-10">
+        {/* TODO: Figure out why the title is hidden by the Starfield */}
 
-        <div className="relative h-[calc(100vh-120px)]">
+        <div className="relative xl:h-[calc(90vh)] flex flex-col items-center justify-center gap-8">
+          <h1 className="text-center text-4xl font-bold mb-8 mt-4 xl:absolute xl:top-4">
+            Lucie&apos;s Universe
+          </h1>
+
           {/* Center Profile */}
           <ProfileCenter />
 
           {/* Profile Text */}
-          <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 mt-24">
+          <div className="xl:absolute xl:top-[40%] xl:left-1/2 xl:transform xl:-translate-x-1/2 xl:mt-24">
             <ProfileText />
           </div>
 

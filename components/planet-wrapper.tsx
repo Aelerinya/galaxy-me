@@ -29,10 +29,10 @@ export default function PlanetWrapper({
 }: PlanetWrapperProps) {
   // Position classes
   const positionClasses = {
-    "top-left": "top-8 left-8",
-    "top-right": "top-8 right-8",
-    "bottom-left": "bottom-8 left-8",
-    "bottom-right": "bottom-8 right-8",
+    "top-left": "xl:top-0 xl:left-0",
+    "top-right": "xl:top-0 xl:right-0",
+    "bottom-left": "xl:bottom-0 xl:left-0",
+    "bottom-right": "xl:bottom-0 xl:right-0",
   };
 
   // Color classes
@@ -58,7 +58,7 @@ export default function PlanetWrapper({
 
   return (
     <div
-      className={`absolute ${positionClasses[position]} z-10`}
+      className={`xl:absolute mb-8 xl:mx-auto ${positionClasses[position]} z-10`}
       data-planet="true"
     >
       <div

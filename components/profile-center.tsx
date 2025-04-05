@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ProfileCenter() {
   return (
     <div
-      className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+      className="xl:absolute xl:top-1/3 xl:left-1/2 xl:transform xl:-translate-x-1/2 xl:-translate-y-1/2 z-10"
       data-center="true"
     >
       <div className="w-64 h-64 rounded-full bg-gradient-to-br from-cosmic-purple to-nebula-pink p-1">
