@@ -122,6 +122,11 @@ export default function Home() {
             size="large"
             links={[
               {
+                label: "Dating Doc",
+                url: "https://www.notion.so/lucieworkinghard/Dating-doc-1e9baaa5219580229fced2a11dcab259",
+                iconUrl: "💞",
+              },
+              {
                 label: "Manifold.love",
                 url: "https://www.manifold.love/Aelerinya",
                 iconUrl:

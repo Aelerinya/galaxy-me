@@ -54,11 +54,14 @@ Currently, I'm on a break and visiting the Bay Area, exploring what my next step
     - Action: copy to clipboard
     - Icon: https://www.google.com/s2/favicons?domain=discord.com&sz=64
 
-## Friendship Planet (Bottom Right)
+## Friendship & Dating Planet (Bottom Right)
 
-- **Title**: Friendship
+- **Title**: Friendship & Dating
 - **Description**: Get to know me better
 - **Links**:
+  - Dating Doc
+    - URL: https://www.notion.so/lucieworkinghard/Dating-doc-1e9baaa5219580229fced2a11dcab259
+    - Icon: 💞
   - Manifold.love
     - URL: https://www.manifold.love/Aelerinya
     - Icon: https://www.google.com/s2/favicons?domain=manifold.love&sz=64
