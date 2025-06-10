@@ -53,6 +53,10 @@ Currently, I'm on a break and visiting the Bay Area, exploring what my next step
     - Label: @aelerinya
     - Action: copy to clipboard
     - Icon: https://www.google.com/s2/favicons?domain=discord.com&sz=64
+  - Signal
+    - Label: @aelerinya.49
+    - Action: copy to clipboard
+    - Icon: /icons/signal.svg
 
 ## Friendship & Dating Planet (Bottom Right)
 

@@ -44,7 +44,7 @@ export default function PlanetLink({
     );
   }
 
-  const isEmoji = iconUrl && !iconUrl.startsWith("http");
+  const isEmoji = iconUrl && !iconUrl.startsWith("http") && !iconUrl.startsWith("/");
 
   return (
     <div className="relative">

@@ -109,6 +109,12 @@ export default function Home() {
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=discord.com&sz=64",
               },
+              {
+                label: "@aelerinya.49",
+                url: "#",
+                action: "copy to clipboard",
+                iconUrl: "/icons/signal.svg",
+              },
             ]}
           />
 
