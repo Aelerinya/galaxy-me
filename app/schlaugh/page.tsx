@@ -2,14 +2,13 @@ import { Metadata } from "next";
 import PostCard from "@/components/post-card";
 import _ from "lodash";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import postsData from "@/public/schlaugh_posts_list.json";
 
 interface Post {
   date: string;
   title: string;
   url: string;
 }
-
-import postsData from "@/schlaugh_posts_list.json";
 
 export const metadata: Metadata = {
   title: "Aelerinya's Schlaugh",

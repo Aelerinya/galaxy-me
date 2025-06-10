@@ -2,7 +2,6 @@ import config from "../../next.config.mjs";
 
 export default async function RedirectsPage() {
   const redirects = await config.redirects?.();
-  console.log(config);
 
   return (
     <div className="container mx-auto p-8">
