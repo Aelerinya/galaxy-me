@@ -173,6 +173,11 @@ export default function Home() {
                   "https://www.google.com/s2/favicons?domain=twitter.com&sz=64",
               },
               {
+                label: "Schlaugh",
+                url: "/schlaugh",
+                iconUrl: "📝",
+              },
+              {
                 label: "My old website with old texts",
                 url: "https://lucieworkinghard.notion.site/Lucie-s-homepage-c1deefa7fbc64ed5b3bb7dd98b963f8d",
               },

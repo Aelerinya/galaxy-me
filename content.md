@@ -87,6 +87,9 @@ Currently, I'm on a break and visiting the Bay Area, exploring what my next step
   - Twitter/X
     - URL: https://x.com/Aelerinya
     - Icon: https://www.google.com/s2/favicons?domain=twitter.com&sz=64
+  - Schlaugh
+    - URL: /schlaugh
+    - Icon: 📝
   - My old website with old texts
     - URL: https://lucieworkinghard.notion.site/Lucie-s-homepage-c1deefa7fbc64ed5b3bb7dd98b963f8d
 
