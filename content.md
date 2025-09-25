@@ -24,7 +24,7 @@ Currently, I'm on a break and visiting the Bay Area, exploring what my next step
     - URL: https://www.linkedin.com/in/lucie-philippon-67690a165/
     - Icon: https://www.google.com/s2/favicons?domain=linkedin.com&sz=64
   - Resume
-    - URL: https://drive.google.com/file/d/1JELje2IDSLOsMUR-HbVFXr7OwSOkaTtL/view?usp=sharing
+    - URL: https://drive.google.com/file/d/1nz40S6SgdVnkWwirRkoGJ-BSjZ3UItnO/view?usp=sharing
     - Icon: https://www.google.com/s2/favicons?domain=pdf.com&sz=64
   - GitHub
     - URL: https://github.com/Aelerinya

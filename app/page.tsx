@@ -49,7 +49,7 @@ export default function Home() {
               },
               {
                 label: "Resume",
-                url: "https://drive.google.com/file/d/1JELje2IDSLOsMUR-HbVFXr7OwSOkaTtL/view?usp=sharing",
+                url: "https://drive.google.com/file/d/1nz40S6SgdVnkWwirRkoGJ-BSjZ3UItnO/view?usp=sharing",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=pdf.com&sz=64",
               },
