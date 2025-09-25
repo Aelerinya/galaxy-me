@@ -19,7 +19,16 @@ export default async function RedirectsPage() {
             <tbody>
               {redirects.map((redirect, index) => (
                 <tr key={index} className="border-b">
-                  <td className="py-2">{redirect.source}</td>
+                  <td className="py-2">
+                    <a
+                      href={`${process.env.NEXT_PUBLIC_SITE_URL}${redirect.source}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800"
+                    >
+                      {redirect.source}
+                    </a>
+                  </td>
                   <td className="py-2">
                     <a
                       href={redirect.destination}

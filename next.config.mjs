@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    NEXT_PUBLIC_SITE_URL: process.env.NODE_ENV === 'production' ? 'https://aelerinya.me' : 'http://localhost:3000',
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
