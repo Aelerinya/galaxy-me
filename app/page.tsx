@@ -115,6 +115,12 @@ export default function Home() {
                 action: "copy to clipboard",
                 iconUrl: "/icons/signal.svg",
               },
+              {
+                label: "@aelerinya",
+                url: "https://t.me/aelerinya",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=telegram.org&sz=64",
+              },
             ]}
           />
 
