@@ -32,11 +32,49 @@ export default function Home() {
             <ProfileText />
           </div>
 
-          {/* AI Work Planet (Top Left) */}
+          {/* Writing Planet (Top Left) */}
+          <WritingPlanet
+            title="Writing"
+            description="My thoughts and writing"
+            position="top-left"
+            baseColor="idea-green"
+            darkColor="forest-green"
+            size="large"
+            links={[
+              {
+                label: "Substack",
+                url: "https://aelerinya.substack.com/",
+                iconUrl: "/lux_ex_machina_clean.png",
+              },
+              {
+                label: "LessWrong",
+                url: "https://www.lesswrong.com/users/lucie-philippon",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=lesswrong.com&sz=64",
+              },
+              {
+                label: "Twitter/X",
+                url: "https://x.com/Aelerinya",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=twitter.com&sz=64",
+              },
+              {
+                label: "Schlaugh",
+                url: "/schlaugh",
+                iconUrl: "📝",
+              },
+              {
+                label: "My old website with old texts",
+                url: "https://lucieworkinghard.notion.site/Lucie-s-homepage-c1deefa7fbc64ed5b3bb7dd98b963f8d",
+              },
+            ]}
+          />
+
+          {/* AI Work Planet (Top Right) */}
           <AIWorkPlanet
             title="AI Work"
             description="My professional work in AI safety and governance"
-            position="top-left"
+            position="top-right"
             baseColor="tech-blue"
             darkColor="deep-blue"
             size="large"
@@ -49,7 +87,7 @@ export default function Home() {
               },
               {
                 label: "Resume",
-                url: "https://drive.google.com/file/d/1nz40S6SgdVnkWwirRkoGJ-BSjZ3UItnO/view?usp=sharing",
+                url: "/cv",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=pdf.com&sz=64",
               },
@@ -65,27 +103,56 @@ export default function Home() {
                 isSectionHeader: true,
               },
               {
-                label: "PECC Workshop",
-                url: "https://app.glueup.com/event/responsible-adoption-of-general-purpose-ai-108941/home.html",
+                label: "Global Call on AI Red Lines",
+                url: "https://red-lines.ai/",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=red-lines.ai&sz=64",
               },
               {
                 label: "AI Safety Connect",
                 url: "https://www.aisafetyconnect.com/",
               },
+            ]}
+          />
+
+          {/* Friendship Planet (Bottom Left) */}
+          <FriendshipPlanet
+            title="Friendship"
+            description="Get to know me better"
+            position="bottom-left"
+            baseColor="relationship-purple"
+            darkColor="deep-purple"
+            size="large"
+            links={[
               {
-                label: "MATS",
-                url: "https://www.matsprogram.org/alumni",
+                label: "Dating Doc",
+                url: "https://www.notion.so/lucieworkinghard/Dating-doc-1e9baaa5219580229fced2a11dcab259",
+                iconUrl: "💞",
+              },
+              {
+                label: "Manifold.love",
+                url: "https://www.manifold.love/Aelerinya",
                 iconUrl:
-                  "https://www.google.com/s2/favicons?domain=matsprogram.org&sz=64",
+                  "https://www.google.com/s2/favicons?domain=manifold.love&sz=64",
+              },
+              {
+                label: "Conversation menu",
+                url: "https://lucieworkinghard.notion.site/Lucie-s-conversation-menu-263f3b13347e49b8a2d09ddcd112f75a",
+                iconUrl: "💬",
+              },
+              {
+                label: "Activities menu",
+                url: "https://lucieworkinghard.notion.site/Activities-menu-1a7baaa52195808588eec4545964dfcb?pvs=25",
+                iconUrl: "🧗",
               },
             ]}
           />
 
-          {/* Contact Info Planet (Top Right) */}
+          {/* Contact Info Planet (Bottom Right) */}
           <ContactPlanet
             title="Contact Info"
             description="Get in touch with me"
-            position="top-right"
+            position="bottom-right"
             baseColor="warm-sun"
             darkColor="sunset-orange"
             size="large"
@@ -120,72 +187,6 @@ export default function Home() {
                 url: "https://t.me/aelerinya",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=telegram.org&sz=64",
-              },
-            ]}
-          />
-
-          {/* Friendship Planet (Bottom Right) */}
-          <FriendshipPlanet
-            title="Friendship"
-            description="Get to know me better"
-            position="bottom-right"
-            baseColor="relationship-purple"
-            darkColor="deep-purple"
-            size="large"
-            links={[
-              {
-                label: "Dating Doc",
-                url: "https://www.notion.so/lucieworkinghard/Dating-doc-1e9baaa5219580229fced2a11dcab259",
-                iconUrl: "💞",
-              },
-              {
-                label: "Manifold.love",
-                url: "https://www.manifold.love/Aelerinya",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=manifold.love&sz=64",
-              },
-              {
-                label: "Conversation menu",
-                url: "https://lucieworkinghard.notion.site/Lucie-s-conversation-menu-263f3b13347e49b8a2d09ddcd112f75a",
-                iconUrl: "💬",
-              },
-              {
-                label: "Activities menu",
-                url: "https://lucieworkinghard.notion.site/Activities-menu-1a7baaa52195808588eec4545964dfcb?pvs=25",
-                iconUrl: "🧗",
-              },
-            ]}
-          />
-
-          {/* Writing Planet (Bottom Left) */}
-          <WritingPlanet
-            title="Writing"
-            description="My thoughts and writing"
-            position="bottom-left"
-            baseColor="idea-green"
-            darkColor="forest-green"
-            size="large"
-            links={[
-              {
-                label: "LessWrong",
-                url: "https://www.lesswrong.com/users/lucie-philippon",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=lesswrong.com&sz=64",
-              },
-              {
-                label: "Twitter/X",
-                url: "https://x.com/Aelerinya",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=twitter.com&sz=64",
-              },
-              {
-                label: "Schlaugh",
-                url: "/schlaugh",
-                iconUrl: "📝",
-              },
-              {
-                label: "My old website with old texts",
-                url: "https://lucieworkinghard.notion.site/Lucie-s-homepage-c1deefa7fbc64ed5b3bb7dd98b963f8d",
               },
             ]}
           />

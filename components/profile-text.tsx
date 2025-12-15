@@ -9,27 +9,70 @@ export default function ProfileText() {
         <div>
           <p className="text-lg text-starlight-white/90">
             Hi there! I&apos;m Lucie Philippon, a French rationalist interested
-            in AI safety, personal development, and community building.
+            in AI safety, writing, personal develomment and community building.
           </p>
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-2">What I&apos;m Up To</h3>
           <p className="text-starlight-white/90">
-            Currently, I&apos;m on a break and visiting the Bay Area, exploring
-            what my next steps might be. I&apos;m working through some big
-            questions like where to live, which relationships to build, and
-            whether to continue policy work or return to software development.
-            If you&apos;re curious about my thought process, check out my{" "}
+            2025 was the{" "}
             <a
-              href="https://docs.google.com/document/d/1383rUz4ca5htvQ_bjJ2VE0Rx23JuBmavNdgSWQJPmNo/edit?tab=t.0#heading=h.kyfsm5olvsip"
+              href="https://aelerinya.substack.com/p/the-year-of-wandering"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cosmic-purple hover:text-nebula-pink underline"
             >
-              career reflections
+              Year of Wandering
             </a>
-            .
+            . I went from travelling to world to{" "}
+            <a
+              href="https://www.inkhaven.blog/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cosmic-purple hover:text-nebula-pink underline"
+            >
+              blogging everyday at Inkhaven
+            </a>
+            , with some{" "}
+            <a
+              href="https://red-lines.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cosmic-purple hover:text-nebula-pink underline"
+            >
+              international AI policy campaigns
+            </a>{" "}
+            in between. Now, I&apos;m figuring out what to do in 2026. This will most
+            likely involve{" "}
+            <a
+              href="https://www.aisafety.paris/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cosmic-purple hover:text-nebula-pink underline"
+            >
+              AI safety community building in Paris
+            </a>
+            , writing about{" "}
+            <a
+              href="https://www.lesswrong.com/posts/rRXoZDYuGDrqhFH6i/france-is-ready-to-stand-alone"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cosmic-purple hover:text-nebula-pink underline"
+            >
+              French AI Policy
+            </a>
+            , and helping out any project that needs me. I&apos;ll blog about my
+            progress on{" "}
+            <a
+              href="https://aelerinya.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cosmic-purple hover:text-nebula-pink underline"
+            >
+              Substack
+            </a>
+            !
           </p>
         </div>
       </div>

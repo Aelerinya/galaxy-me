@@ -8,11 +8,11 @@
 ## Presentation
 
 ```md
-Hi there! I'm Lucie Philippon, a French rationalist interested in AI safety, personal development, and community building.
+Hi there! I'm Lucie Philippon, a French rationalist interested in AI safety, writing, personal develomment and community building.
 
 ## What I'm Up To
 
-Currently, I'm on a break and visiting the Bay Area, exploring what my next steps might be. I'm working through some big questions like where to live, which relationships to build, and whether to continue policy work or return to software development. If you're curious about my thought process, check out my [career reflections](https://docs.google.com/document/d/1383rUz4ca5htvQ_bjJ2VE0Rx23JuBmavNdgSWQJPmNo/edit?tab=t.0#heading=h.kyfsm5olvsip).
+2025 was the [Year of Wandering](https://aelerinya.substack.com/p/the-year-of-wandering). I went from travelling to world to [blogging everyday at Inkhaven](https://www.inkhaven.blog/), with some [international AI policy campaigns](https://red-lines.ai/) in between. Now, I'm figuring out what to do in 2026. This will most likely involve [AI safety community building in Paris](https://www.aisafety.paris/), writing about [French AI Policy](https://www.lesswrong.com/posts/rRXoZDYuGDrqhFH6i/france-is-ready-to-stand-alone), and helping out any project that needs me. I'll blog about my progress on [Substack](https://aelerinya.substack.com/)!
 ```
 
 ## AI Work Planet (Top Left)
@@ -24,19 +24,17 @@ Currently, I'm on a break and visiting the Bay Area, exploring what my next step
     - URL: https://www.linkedin.com/in/lucie-philippon-67690a165/
     - Icon: https://www.google.com/s2/favicons?domain=linkedin.com&sz=64
   - Resume
-    - URL: https://drive.google.com/file/d/1nz40S6SgdVnkWwirRkoGJ-BSjZ3UItnO/view?usp=sharing
+    - URL: /cv
     - Icon: https://www.google.com/s2/favicons?domain=pdf.com&sz=64
   - GitHub
     - URL: https://github.com/Aelerinya
     - Icon: https://www.google.com/s2/favicons?domain=github.com&sz=64
   - Latest projets (section)
-    - PECC Workshop
-      - URL: https://app.glueup.com/event/responsible-adoption-of-general-purpose-ai-108941/home.html
+    - Global Call on AI Red Lines
+      - URL: https://red-lines.ai/
+      - Icon: https://www.google.com/s2/favicons?domain=red-lines.ai&sz=64
     - AI Safety Connect
       - URL: https://www.aisafetyconnect.com/
-    - MATS
-      - URL: https://www.matsprogram.org/alumni
-      - Icon: https://www.google.com/s2/favicons?domain=matsprogram.org&sz=64
 
 ## Contact Info Planet (Top Right)
 
@@ -81,6 +79,9 @@ Currently, I'm on a break and visiting the Bay Area, exploring what my next step
 - **Title**: Writing
 - **Description**: My thoughts and writing
 - **Links**:
+  - Substack
+    - URL: https://aelerinya.substack.com/
+    - Icon: /lux_ex_machina_clean.png
   - LessWrong
     - URL: https://www.lesswrong.com/users/lucie-philippon
     - Icon: https://www.google.com/s2/favicons?domain=lesswrong.com&sz=64
