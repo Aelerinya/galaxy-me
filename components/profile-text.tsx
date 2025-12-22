@@ -74,6 +74,16 @@ export default function ProfileText() {
             </a>
             !
           </p>
+          <p className="text-starlight-white/90 mt-2">
+            I&apos;m also looking for work. You can{" "}
+            <a
+              href="/hire-me"
+              className="text-cosmic-purple hover:text-nebula-pink underline"
+            >
+              hire me
+            </a>
+            !
+          </p>
         </div>
       </div>
     </div>

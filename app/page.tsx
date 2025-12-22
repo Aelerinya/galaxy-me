@@ -72,13 +72,18 @@ export default function Home() {
 
           {/* AI Work Planet (Top Right) */}
           <AIWorkPlanet
-            title="AI Work"
+            title="Work"
             description="My professional work in AI safety and governance"
             position="top-right"
             baseColor="tech-blue"
             darkColor="deep-blue"
             size="large"
             links={[
+              {
+                label: "Hire me",
+                url: "/hire-me",
+                iconUrl: "👩‍🎨",
+              },
               {
                 label: "LinkedIn",
                 url: "https://www.linkedin.com/in/lucie-philippon-67690a165/",
@@ -90,12 +95,6 @@ export default function Home() {
                 url: "/cv",
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=pdf.com&sz=64",
-              },
-              {
-                label: "GitHub",
-                url: "https://github.com/Aelerinya",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=github.com&sz=64",
               },
               {
                 label: "Latest projets",

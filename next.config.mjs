@@ -23,6 +23,11 @@ const nextConfig = {
         source: '/cv',
         destination: 'https://drive.google.com/file/d/1nz40S6SgdVnkWwirRkoGJ-BSjZ3UItnO/view?usp=sharing',
         permanent: false,
+      },
+      {
+        source: '/hire-me',
+        destination: 'https://www.notion.so/lucieworkinghard/Hire-me-Lucie-2d1baaa52195801a80b0dd4def8a1ce9',
+        permanent: false,
       }
     ];
   },
