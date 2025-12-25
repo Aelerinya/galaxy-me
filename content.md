@@ -13,22 +13,24 @@ Hi there! I'm Lucie Philippon, a French rationalist interested in AI safety, wri
 ## What I'm Up To
 
 2025 was the [Year of Wandering](https://aelerinya.substack.com/p/the-year-of-wandering). I went from travelling to world to [blogging everyday at Inkhaven](https://www.inkhaven.blog/), with some [international AI policy campaigns](https://red-lines.ai/) in between. Now, I'm figuring out what to do in 2026. This will most likely involve [AI safety community building in Paris](https://www.aisafety.paris/), writing about [French AI Policy](https://www.lesswrong.com/posts/rRXoZDYuGDrqhFH6i/france-is-ready-to-stand-alone), and helping out any project that needs me. I'll blog about my progress on [Substack](https://aelerinya.substack.com/)!
+
+I'm also looking for work. You can [hire me](/hire-me)!
 ```
 
-## AI Work Planet (Top Left)
+## AI Work Planet (Top Right)
 
-- **Title**: AI Work
+- **Title**: Work
 - **Description**: My professional work in AI safety and governance
 - **Links**:
+  - Hire me
+    - URL: /hire-me
+    - Icon: 👩‍🎨
   - LinkedIn
     - URL: https://www.linkedin.com/in/lucie-philippon-67690a165/
     - Icon: https://www.google.com/s2/favicons?domain=linkedin.com&sz=64
   - Resume
     - URL: /cv
     - Icon: https://www.google.com/s2/favicons?domain=pdf.com&sz=64
-  - GitHub
-    - URL: https://github.com/Aelerinya
-    - Icon: https://www.google.com/s2/favicons?domain=github.com&sz=64
   - Latest projets (section)
     - Global Call on AI Red Lines
       - URL: https://red-lines.ai/
@@ -36,7 +38,7 @@ Hi there! I'm Lucie Philippon, a French rationalist interested in AI safety, wri
     - AI Safety Connect
       - URL: https://www.aisafetyconnect.com/
 
-## Contact Info Planet (Top Right)
+## Contact Info Planet (Bottom Right)
 
 - **Title**: Contact Info
 - **Description**: Get in touch with me
@@ -55,10 +57,14 @@ Hi there! I'm Lucie Philippon, a French rationalist interested in AI safety, wri
     - Label: @aelerinya.49
     - Action: copy to clipboard
     - Icon: /icons/signal.svg
+  - Telegram
+    - Label: @aelerinya
+    - URL: https://t.me/aelerinya
+    - Icon: https://www.google.com/s2/favicons?domain=telegram.org&sz=64
 
-## Friendship & Dating Planet (Bottom Right)
+## Friendship & Dating Planet (Bottom Left)
 
-- **Title**: Friendship & Dating
+- **Title**: Friendship
 - **Description**: Get to know me better
 - **Links**:
   - Dating Doc
@@ -74,7 +80,7 @@ Hi there! I'm Lucie Philippon, a French rationalist interested in AI safety, wri
     - URL: https://lucieworkinghard.notion.site/Activities-menu-1a7baaa52195808588eec4545964dfcb?pvs=25
     - Icon: 🧗
 
-## Writing Planet (Bottom Left)
+## Writing Planet (Top Left)
 
 - **Title**: Writing
 - **Description**: My thoughts and writing
