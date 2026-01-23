@@ -21,7 +21,7 @@ const nextConfig = {
       },
       {
         source: '/cv',
-        destination: 'https://drive.google.com/file/d/1nz40S6SgdVnkWwirRkoGJ-BSjZ3UItnO/view?usp=sharing',
+        destination: 'https://drive.google.com/file/d/1T7JMnWyBQQzVCFN4nMQgf_8c9qMLv_tj/view?usp=sharing',
         permanent: false,
       },
       {
