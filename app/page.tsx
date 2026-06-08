@@ -187,6 +187,12 @@ export default function Home() {
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=telegram.org&sz=64",
               },
+              {
+                label: "@aelerinya:matrix.org",
+                url: "https://matrix.to/#/@aelerinya:matrix.org",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=matrix.org&sz=64",
+              },
             ]}
           />
         </div>
