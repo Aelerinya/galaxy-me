@@ -193,6 +193,12 @@ export default function Home() {
                 iconUrl:
                   "https://www.google.com/s2/favicons?domain=matrix.org&sz=64",
               },
+              {
+                label: "aelerinya.eth",
+                url: "https://app.ens.domains/aelerinya.eth",
+                iconUrl:
+                  "https://www.google.com/s2/favicons?domain=ens.domains&sz=64",
+              },
             ]}
           />
         </div>
