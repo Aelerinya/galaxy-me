@@ -80,7 +80,7 @@ export default function Home() {
               label={venue.label}
               note={
                 venue.href === "/schlaugh"
-                  ? `${postsData.posts.length} posts, ${venue.note}`
+                  ? `${postsData.posts.length} ${venue.note}`
                   : venue.note
               }
             />

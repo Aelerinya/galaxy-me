@@ -33,7 +33,7 @@ async function generateTitle(content: string): Promise<string> {
 
   const response = msg.content[0].text.trim();
 
-  const title = response.match(/<title>(.*?)<\/title>/)?.[1];
+  const title = response.match(/<title>\s*([\s\S]*?)\s*<\/title>/)?.[1];
 
   if (!title) {
     throw new Error(`Unexpected response format: ${response}`);

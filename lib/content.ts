@@ -65,7 +65,7 @@ export const writingVenues = [
   },
   {
     label: "Microblog",
-    note: "near-daily posts, Feb–Jul 2025",
+    note: "short posts on schlaugh.com",
     href: "/schlaugh",
   },
 ];

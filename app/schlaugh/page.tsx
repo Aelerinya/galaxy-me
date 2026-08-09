@@ -59,8 +59,9 @@ export default function SchlaughPage() {
       </p>
       <p className="mt-6">
         I posted here near-daily from February to July 2025 — I wrote more in
-        that stretch than ever before. The format is unstructured, so this index
-        exists to find posts back. Titles are Claude-generated.
+        that stretch than ever before — and I still drop in from time to time.
+        The format is unstructured, so this index exists to find posts back.
+        Titles are Claude-generated.
       </p>
       <div className="mt-10">
         {[...byMonth.entries()].map(([month, monthPosts]) => (
