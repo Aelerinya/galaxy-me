@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# original photos (derive crops into public/, keep originals out of git)
+/me_vincenne_janvier_2026.jpg

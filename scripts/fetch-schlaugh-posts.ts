@@ -1,6 +1,5 @@
 import { fetchAllSchlaughPosts } from "../lib/schlaugh_utils";
 import * as fs from "fs/promises";
-import _ from "lodash";
 import * as path from "path";
 import { Anthropic } from "@anthropic-ai/sdk";
 import dotenv from "dotenv";
@@ -11,13 +10,10 @@ const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-console.log(process.env.ANTHROPIC_API_KEY);
-
 async function generateTitle(content: string): Promise<string> {
   const msg = await client.messages.create({
-    model: "claude-3-7-sonnet-20250219",
-    max_tokens: 8192,
-    temperature: 1,
+    model: "claude-haiku-4-5",
+    max_tokens: 1024,
     messages: [
       {
         role: "user",
@@ -30,7 +26,6 @@ async function generateTitle(content: string): Promise<string> {
       },
     ],
   });
-  console.log(msg);
 
   if (msg.content[0].type !== "text") {
     throw new Error("Unexpected response format");
@@ -38,7 +33,7 @@ async function generateTitle(content: string): Promise<string> {
 
   const response = msg.content[0].text.trim();
 
-  const title = response.match(/<title>(.*?)<\/title>/)?.[1];
+  const title = response.match(/<title>\s*([\s\S]*?)\s*<\/title>/)?.[1];
 
   if (!title) {
     throw new Error(`Unexpected response format: ${response}`);
@@ -61,7 +56,7 @@ async function main() {
   const outputPath = path.join(
     __dirname,
     "..",
-    "public",
+    "data",
     "schlaugh_posts_list.json"
   );
   const existingData: { posts: SavedPost[] } = JSON.parse(
@@ -78,6 +73,7 @@ async function main() {
       continue;
     }
     const title = post.title || (await generateTitle(post.body));
+    console.log(`New post ${post.date}: ${title}`);
     newFormattedPosts.push({
       date: post.date,
       title,
@@ -85,10 +81,10 @@ async function main() {
     });
   }
 
-  const sortedNewPosts = _.sortBy(newFormattedPosts, (post) => post.date);
+  newFormattedPosts.sort((a, b) => a.date.localeCompare(b.date));
 
   // Combine existing and new posts
-  const combinedPosts = [...existingData.posts, ...sortedNewPosts];
+  const combinedPosts = [...existingData.posts, ...newFormattedPosts];
 
   // Write updated data
   const data = JSON.stringify({ posts: combinedPosts }, null, 2);
@@ -98,7 +94,6 @@ async function main() {
   console.log(`- Existing posts: ${existingData.posts.length}`);
   console.log(`- New posts added: ${newFormattedPosts.length}`);
   console.log(`- Total posts: ${combinedPosts.length}`);
-  console.log(`- Latest post date: ${combinedPosts[combinedPosts.length - 1]}`);
 }
 
 main().catch((error) => {

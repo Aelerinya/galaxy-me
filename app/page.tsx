@@ -1,208 +1,186 @@
-import Starfield from "@/components/starfield";
-import AIWorkPlanet from "@/components/ai-work-planet";
-import ProfileCenter from "@/components/profile-center";
-import ProfileText from "@/components/profile-text";
-import ContactPlanet from "@/components/contact-planet";
-import FriendshipPlanet from "@/components/friendship-planet";
-import WritingPlanet from "@/components/writing-planet";
 import Image from "next/image";
+import { Icon } from "@/components/icons";
+import { Section } from "@/components/section";
+import { LinkCard, InlineLink } from "@/components/link-item";
+import { CopyButton } from "@/components/copy-button";
+import { LatestWriting } from "@/components/latest-writing";
+import {
+  profile,
+  identityLinks,
+  now,
+  writingVenues,
+  work,
+  personal,
+  contact,
+  footer,
+} from "@/lib/content";
+import postsData from "@/data/schlaugh_posts_list.json";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-space-blue text-starlight-white">
-      <Starfield />
+    <main className="mx-auto max-w-2xl px-5 pb-24 pt-16 sm:pt-24">
+      {/* Hero */}
+      <header>
+        <Image
+          src="/images/profile.jpg"
+          alt="Lucie Philippon, on a path in the Bois de Vincennes at sunset"
+          width={88}
+          height={88}
+          priority
+          className="rounded-full border border-hairline"
+        />
+        <h1 className="mt-6 font-display text-4xl font-semibold sm:text-5xl">
+          {profile.name}
+        </h1>
+        <p className="mt-2 font-mono text-sm text-muted">
+          @{profile.handle} · {profile.location}
+        </p>
+        <p className="mt-6">{profile.intro}</p>
+        <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+          {identityLinks.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-spark"
+              >
+                <Icon name={link.icon} className="h-4 w-4" />
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </header>
 
-      <div className="container mx-auto px-4 py-8 z-10">
-        <div className="relative xl:h-[calc(90vh)] flex flex-col items-center justify-center gap-8">
-          <h1 className="text-center text-4xl font-bold mb-8 mt-4 xl:absolute xl:top-4 flex items-center justify-center gap-2">
-            <Image
-              src="/images/lp-cosmic-favicon.svg"
-              alt="LP Logo"
-              width={96}
-              height={96}
+      {/* Now */}
+      <Section id="now" title="Now" accent="contact">
+        <p className="font-mono text-xs uppercase tracking-wider text-muted">
+          Last updated: {now.updated}
+        </p>
+        <ul className="mt-3 space-y-2">
+          {now.items.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span className="text-spark" aria-hidden="true">
+                ✦
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* Writing */}
+      <Section id="writing" title="Writing" accent="writing">
+        <div className="grid gap-3 sm:grid-cols-3">
+          {writingVenues.map((venue) => (
+            <LinkCard
+              key={venue.label}
+              href={venue.href}
+              label={venue.label}
+              note={
+                venue.href === "/schlaugh"
+                  ? `${postsData.posts.length} ${venue.note}`
+                  : venue.note
+              }
             />
-            Lucie&apos;s Universe
-          </h1>
-
-          {/* Center Profile */}
-          <ProfileCenter />
-
-          {/* Profile Text */}
-          <div className="xl:absolute xl:top-[40%] xl:left-1/2 xl:transform xl:-translate-x-1/2 xl:mt-24">
-            <ProfileText />
-          </div>
-
-          {/* Writing Planet (Top Left) */}
-          <WritingPlanet
-            title="Writing"
-            description="My thoughts and writing"
-            position="top-left"
-            baseColor="idea-green"
-            darkColor="forest-green"
-            size="large"
-            links={[
-              {
-                label: "Substack",
-                url: "https://aelerinya.substack.com/",
-                iconUrl: "/lux_ex_machina_clean.png",
-              },
-              {
-                label: "LessWrong",
-                url: "https://www.lesswrong.com/users/lucie-philippon",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=lesswrong.com&sz=64",
-              },
-              {
-                label: "Twitter/X",
-                url: "https://x.com/Aelerinya",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=twitter.com&sz=64",
-              },
-              {
-                label: "Schlaugh",
-                url: "/schlaugh",
-                iconUrl: "📝",
-              },
-              {
-                label: "My old website with old texts",
-                url: "https://lucieworkinghard.notion.site/Lucie-s-homepage-c1deefa7fbc64ed5b3bb7dd98b963f8d",
-              },
-            ]}
-          />
-
-          {/* AI Work Planet (Top Right) */}
-          <AIWorkPlanet
-            title="Work"
-            description="My professional work in AI safety and governance"
-            position="top-right"
-            baseColor="tech-blue"
-            darkColor="deep-blue"
-            size="large"
-            links={[
-              {
-                label: "Hire me",
-                url: "/hire-me",
-                iconUrl: "👩‍🎨",
-              },
-              {
-                label: "LinkedIn",
-                url: "https://www.linkedin.com/in/lucie-philippon-67690a165/",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=linkedin.com&sz=64",
-              },
-              {
-                label: "Resume",
-                url: "/cv",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=pdf.com&sz=64",
-              },
-              {
-                label: "Latest projets",
-                url: "#",
-                isSectionHeader: true,
-              },
-              {
-                label: "Global Call on AI Red Lines",
-                url: "https://red-lines.ai/",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=red-lines.ai&sz=64",
-              },
-              {
-                label: "AI Safety Connect",
-                url: "https://www.aisafetyconnect.com/",
-              },
-            ]}
-          />
-
-          {/* Friendship Planet (Bottom Left) */}
-          <FriendshipPlanet
-            title="Friendship"
-            description="Get to know me better"
-            position="bottom-left"
-            baseColor="relationship-purple"
-            darkColor="deep-purple"
-            size="large"
-            links={[
-              {
-                label: "Dating Doc",
-                url: "https://www.notion.so/lucieworkinghard/Dating-doc-1e9baaa5219580229fced2a11dcab259",
-                iconUrl: "💞",
-              },
-              {
-                label: "Manifold.love",
-                url: "https://www.manifold.love/Aelerinya",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=manifold.love&sz=64",
-              },
-              {
-                label: "Conversation menu",
-                url: "https://lucieworkinghard.notion.site/Lucie-s-conversation-menu-263f3b13347e49b8a2d09ddcd112f75a",
-                iconUrl: "💬",
-              },
-              {
-                label: "Activities menu",
-                url: "https://lucieworkinghard.notion.site/Activities-menu-1a7baaa52195808588eec4545964dfcb?pvs=25",
-                iconUrl: "🧗",
-              },
-            ]}
-          />
-
-          {/* Contact Info Planet (Bottom Right) */}
-          <ContactPlanet
-            title="Contact Info"
-            description="Get in touch with me"
-            position="bottom-right"
-            baseColor="warm-sun"
-            darkColor="sunset-orange"
-            size="large"
-            links={[
-              {
-                label: "Email",
-                url: "mailto:lucie.philippon@proton.me",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=proton.me&sz=64",
-              },
-              {
-                label: "Phone",
-                url: "tel:+33782840880",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=phone.com&sz=64",
-              },
-              {
-                label: "@aelerinya",
-                url: "#",
-                action: "copy to clipboard",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=discord.com&sz=64",
-              },
-              {
-                label: "@aelerinya.49",
-                url: "#",
-                action: "copy to clipboard",
-                iconUrl: "/icons/signal.svg",
-              },
-              {
-                label: "@aelerinya",
-                url: "https://t.me/aelerinya",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=telegram.org&sz=64",
-              },
-              {
-                label: "@aelerinya:matrix.org",
-                url: "https://matrix.to/#/@aelerinya:matrix.org",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=matrix.org&sz=64",
-              },
-              {
-                label: "aelerinya.eth",
-                url: "https://app.ens.domains/aelerinya.eth",
-                iconUrl:
-                  "https://www.google.com/s2/favicons?domain=ens.domains&sz=64",
-              },
-            ]}
-          />
+          ))}
         </div>
-      </div>
+        <LatestWriting />
+      </Section>
+
+      {/* Work */}
+      <Section id="work" title="Work" accent="work">
+        <p>{work.blurb}</p>
+        <ul className="mt-4 space-y-2">
+          {work.projects.map((project) => (
+            <li key={project.label} className="flex gap-3">
+              <span style={{ color: "var(--accent)" }} aria-hidden="true">
+                ✦
+              </span>
+              <InlineLink href={project.href}>{project.label}</InlineLink>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-muted">{work.previously.blurb}</p>
+        <ul className="mt-3 space-y-2">
+          {work.previously.projects.map((project) => (
+            <li key={project.label} className="flex gap-3">
+              <span className="opacity-60" style={{ color: "var(--accent)" }} aria-hidden="true">
+                ✦
+              </span>
+              <InlineLink href={project.href}>{project.label}</InlineLink>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-muted">
+          {work.availability.before}
+          <InlineLink href="#contact">{work.availability.convince}</InlineLink>
+          {work.availability.after}{" "}
+          {work.hireLine.map((link, i) => (
+            <span key={link.label}>
+              {i > 0 ? " · " : "— "}
+              <InlineLink href={link.href}>{link.label}</InlineLink>
+            </span>
+          ))}
+        </p>
+      </Section>
+
+      {/* Get to know me */}
+      <Section id="personal" title="Get to know me" accent="personal">
+        <p className="text-muted">{personal.framing}</p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {personal.links.map((link) => (
+            <LinkCard key={link.label} href={link.href} label={link.label} emoji={link.emoji} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Say hi */}
+      <Section id="contact" title="Say hi" accent="contact">
+        <p className="text-muted">{contact.framing}</p>
+        <ul className="mt-4 space-y-1">
+          {contact.methods.map((method) => (
+            <li key={method.label}>
+              {method.kind === "link" ? (
+                <a
+                  href={method.href}
+                  {...(method.href.startsWith("http")
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  className="group flex min-h-11 items-center gap-3 rounded-lg px-2 py-2 -mx-2 transition-colors hover:bg-hairline/40"
+                >
+                  <Icon name={method.icon} className="h-4 w-4 text-muted" />
+                  <span className="font-medium">{method.label}</span>
+                  <span className="font-mono text-sm text-muted">{method.detail}</span>
+                </a>
+              ) : (
+                <CopyButton
+                  value={method.value}
+                  className="group flex min-h-11 w-full items-center gap-3 rounded-lg px-2 py-2 -mx-2 text-left transition-colors hover:bg-hairline/40"
+                >
+                  <Icon name={method.icon} className="h-4 w-4 text-muted" />
+                  <span className="font-medium">{method.label}</span>
+                  <span className="font-mono text-sm text-muted">{method.detail}</span>
+                </CopyButton>
+              )}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* Footer */}
+      <footer className="mt-24 border-t border-hairline pt-8 text-center">
+        <p className="text-spark" aria-hidden="true">
+          ✦
+        </p>
+        <p className="mt-4 font-mono text-xs text-muted">
+          aelerinya.me ·{" "}
+          <a href={footer.archive.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
+            {footer.archive.label}
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }

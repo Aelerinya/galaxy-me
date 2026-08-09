@@ -1,22 +1,77 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --foreground-rgb: 248, 247, 255;
-  --background-rgb: 11, 14, 45;
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+  --font-display: var(--font-fraunces), Georgia, serif;
+
+  /* Lux palette — warm paper, ink, one amber spark */
+  --color-paper: #fbf8f3;
+  --color-ink: #211d1a;
+  --color-muted: #6e675f;
+  --color-hairline: #e8e2d8;
+  --color-spark: #d97a1f;
+
+  /* Section accents, inherited from the old planet palette */
+  --color-writing: #0e9f76;
+  --color-work: #0077b0;
+  --color-personal: #8a4f9e;
+  --color-contact: #d97a1f;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: #191613;
+    --color-ink: #ede7de;
+    --color-muted: #a39a8e;
+    --color-hairline: #322c26;
+    --color-spark: #eb9440;
+    --color-writing: #2cbd93;
+    --color-work: #3ba3d9;
+    --color-personal: #b077c4;
+    --color-contact: #eb9440;
   }
 }
 
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--color-spark) 30%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-spark);
+  outline-offset: 2px;
+}
+
+/* The signature spark: rotates a quarter-turn when its section heading is hovered */
+.spark {
+  display: inline-block;
+  transition: transform 200ms ease;
+}
+h2:hover .spark,
+a:hover > .spark {
+  transform: rotate(90deg);
+}
+
+/* External-link arrow nudges up-right on hover */
+.ext-arrow {
+  display: inline-block;
+  transition: transform 150ms ease;
+}
+a:hover .ext-arrow {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spark,
+  .ext-arrow {
+    transition: none;
+  }
+}
