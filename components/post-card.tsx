@@ -4,30 +4,18 @@ interface Post {
   url: string;
 }
 
-export default function PostCard({ post }: { post: Post }) {
-  const date = new Date(post.date);
-  const formattedDate = date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
+export function PostRow({ post }: { post: Post }) {
   return (
-    <div className="flex items-center gap-2 py-1 hover:bg-starlight-black/50 transition-colors rounded-lg">
-      <span className="text-starlight-white/30">•</span>
-      <div className="flex flex-col">
-        <div className="flex items-center gap-3">
-          <a
-            href={post.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-starlight-white hover:text-starlight-blue"
-          >
-            {post.title}
-          </a>
-          <span className="text-starlight-white/70 text-sm">{formattedDate}</span>
-        </div>
-      </div>
-    </div>
+    <li className="flex flex-col gap-x-6 gap-y-0.5 py-1.5 sm:flex-row sm:items-baseline">
+      <span className="shrink-0 font-mono text-xs text-muted sm:w-24">{post.date}</span>
+      <a
+        href={post.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline decoration-hairline underline-offset-4 hover:decoration-2 hover:[text-decoration-color:var(--color-writing)]"
+      >
+        {post.title}
+      </a>
+    </li>
   );
 }
