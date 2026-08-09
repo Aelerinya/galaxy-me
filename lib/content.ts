@@ -10,7 +10,9 @@ export type IconName =
   | "email"
   | "signal"
   | "telegram"
-  | "discord";
+  | "discord"
+  | "matrix"
+  | "ethereum";
 
 export interface Profile {
   name: string;
@@ -155,6 +157,20 @@ export const contact: { framing: string; methods: ContactMethod[] } = {
       icon: "discord",
       kind: "copy",
       value: "@aelerinya",
+    },
+    {
+      label: "Matrix",
+      detail: "@aelerinya:matrix.org",
+      icon: "matrix",
+      kind: "link",
+      href: "https://matrix.to/#/@aelerinya:matrix.org",
+    },
+    {
+      label: "Ethereum",
+      detail: "aelerinya.eth",
+      icon: "ethereum",
+      kind: "link",
+      href: "https://app.ens.domains/aelerinya.eth",
     },
   ],
 };
