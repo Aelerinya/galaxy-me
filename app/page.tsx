@@ -102,6 +102,17 @@ export default function Home() {
             </li>
           ))}
         </ul>
+        <p className="mt-6 text-muted">{work.previously.blurb}</p>
+        <ul className="mt-3 space-y-2">
+          {work.previously.projects.map((project) => (
+            <li key={project.label} className="flex gap-3">
+              <span className="opacity-60" style={{ color: "var(--accent)" }} aria-hidden="true">
+                ✦
+              </span>
+              <InlineLink href={project.href}>{project.label}</InlineLink>
+            </li>
+          ))}
+        </ul>
         <p className="mt-6 text-muted">
           Open to interesting work —{" "}
           {work.hireLine.map((link, i) => (

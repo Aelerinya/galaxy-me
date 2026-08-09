@@ -22,9 +22,9 @@ export interface Profile {
 export const profile: Profile = {
   name: "Lucie Philippon",
   handle: "aelerinya",
-  location: "Paris",
+  location: "Berkeley",
   intro:
-    "Hi! I'm Lucie — a French rationalist in Paris. I work on AI safety community building and French AI policy, and I write about all of it, plus the occasional personal development rabbit hole.",
+    "Hi! I'm Lucie — a French rationalist in Berkeley. I run Lighthaven, one of the coolest places in the world. Before, I was doing AI policy and community building in Paris, and wrote about a lot of it.",
 };
 
 export interface IdentityLink {
@@ -45,10 +45,9 @@ export const identityLinks: IdentityLink[] = [
 export const now = {
   updated: "August 2026",
   items: [
-    // TODO(lucie): replace with your real current status
-    "Building up the AI safety community in Paris.",
-    "Writing about French AI policy and whatever else is on my mind, at Lux ex Machina and LessWrong.",
-    "Open to interesting work and projects that need a hand.",
+    "Running Lighthaven",
+    "Preparing for Burning Man with my camp, Next Year on Luna (join us!)",
+    "Trying out group houses in Berkeley",
   ],
 };
 
@@ -72,12 +71,19 @@ export const writingVenues = [
 
 export const work = {
   blurb:
-    "I work on AI safety community building and French AI policy, from Paris. Recent projects:",
+    "I work at Lightcone Infrastructure, where I run Lighthaven, our campus in Berkeley.",
   projects: [
-    { label: "Global Call on AI Red Lines", href: "https://red-lines.ai/" },
-    { label: "AI Safety Connect", href: "https://www.aisafetyconnect.com/" },
-    { label: "AI Safety Paris", href: "/paris-ai-safety" },
+    { label: "Lightcone Infrastructure", href: "https://www.lightconeinfrastructure.com/" },
+    { label: "Lighthaven", href: "https://www.lighthaven.space/" },
   ],
+  previously: {
+    blurb: "Previously, I worked on AI safety community building and French AI policy in Paris:",
+    projects: [
+      { label: "Global Call on AI Red Lines", href: "https://red-lines.ai/" },
+      { label: "AI Safety Connect", href: "https://www.aisafetyconnect.com/" },
+      { label: "AI Safety Paris", href: "/paris-ai-safety" },
+    ],
+  },
   hireLine: [
     { label: "CV", href: "/cv" },
     { label: "hire me", href: "/hire-me" },
