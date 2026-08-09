@@ -84,9 +84,13 @@ export const work = {
       { label: "AI Safety Paris", href: "/paris-ai-safety" },
     ],
   },
+  availability: {
+    before: "Not open to new opportunities right now — but feel free to ",
+    convince: "try to convince me otherwise",
+    after: ".",
+  },
   hireLine: [
     { label: "CV", href: "/cv" },
-    { label: "hire me", href: "/hire-me" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/lucie-philippon-67690a165/" },
   ],
 };

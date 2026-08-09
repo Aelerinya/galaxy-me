@@ -114,10 +114,12 @@ export default function Home() {
           ))}
         </ul>
         <p className="mt-6 text-muted">
-          Open to interesting work —{" "}
+          {work.availability.before}
+          <InlineLink href="#contact">{work.availability.convince}</InlineLink>
+          {work.availability.after}{" "}
           {work.hireLine.map((link, i) => (
             <span key={link.label}>
-              {i > 0 && " · "}
+              {i > 0 ? " · " : "— "}
               <InlineLink href={link.href}>{link.label}</InlineLink>
             </span>
           ))}
