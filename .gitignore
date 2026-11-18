@@ -37,3 +37,7 @@ next-env.d.ts
 
 # original photos (derive crops into public/, keep originals out of git)
 /me_vincenne_janvier_2026.jpg
+
+# private letter sources and their link keys (only encrypted copies in data/letters/ get committed)
+/letters-src/*
+!/letters-src/_example.txt

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "fetch-schlaugh-posts": "tsx scripts/fetch-schlaugh-posts.ts"
+    "fetch-schlaugh-posts": "tsx scripts/fetch-schlaugh-posts.ts",
+    "seal-letter": "tsx scripts/seal-letter.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

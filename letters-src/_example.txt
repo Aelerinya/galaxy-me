@@ -1,0 +1,12 @@
+date: Berkeley, 18 November 2026
+signature: Lucie
+---
+Dear friend,
+
+This is placeholder text. Copy this file to letters-src/<name>.txt, paste your letter in, and run: npm run seal-letter -- letters-src/<name>.txt --key <your-key> (12+ characters). The name becomes the public URL, so pick one that gives nothing away; lowercase letters, digits and dashes only, no leading underscore.
+
+Put a blank line between paragraphs. A single line break stays a line break, which is handy for the greeting or a short list.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+With love,
